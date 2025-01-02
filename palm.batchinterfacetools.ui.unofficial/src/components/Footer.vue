@@ -9,7 +9,7 @@
           </a>
           <ul class="list-unstyled small">
             <li class="mb-2">Designed and built out of pure frustration.</li>
-            <li class="mb-2">Code and site tools are licensed <a href="#" target="_blank" rel="license noopener">MIT.</a></li>
+            <li class="mb-2">Code and site tools are licensed <a href="https://github.com/markrissinger/PALM.BatchInterfaceTools.UI.Unofficial/blob/master/LICENSE.txt" target="_blank" rel="license noopener">MIT.</a></li>
             <li class="mb-2">Currently in development.</li>
           </ul>
         </div>
@@ -19,7 +19,6 @@
           <ul class="list-unstyled">
             <li class="mb-2"><router-link to="/" aria-current="page">Home</router-link></li>
             <li class="mb-2"><router-link to="/About">About</router-link></li>
-            <li class="mb-2"><router-link to="/Contact">Contact</router-link></li>
           </ul>
         </div>
       </div>

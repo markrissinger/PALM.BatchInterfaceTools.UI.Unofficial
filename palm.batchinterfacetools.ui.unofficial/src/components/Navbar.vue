@@ -36,13 +36,14 @@
           <!--Interface Converters-->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Interface Converters
+              PALM Batch Interface File Converters
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><router-link to="/inboundvoucherload" class="nav-link" aria-current="page">Inbound Voucher Load (API002)</router-link></li>
+              <li><router-link to="/inboundjournalentry" class="nav-link" aria-current="page">Inbound Journal Entry (GLI006)</router-link></li>
+              <li><router-link to="/inboundinterintraunit" class="nav-link" aria-current="page">Inbound Inter/Intra Unit (IUI002)</router-link></li>
+              <li><router-link to="/inboundbudgetjournal" class="nav-link" aria-current="page">Inbound Budget Journal (KKI001)</router-link></li>
+              <li><router-link to="/inboundencumbranceload" class="nav-link" aria-current="page">Inbound Encumbrance Load (POI002)</router-link></li>
             </ul>
           </li>
 
@@ -50,17 +51,12 @@
           <li class="nav-item">
             <router-link to="/About" class="nav-link">About</router-link>
           </li>
-
-          <!--Contact-->
-          <li class="nav-item">
-            <router-link to="/Contact" class="nav-link">Contact</router-link>
-          </li>
         </ul>
 
         <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
           <!--Github-->
           <li class="nav-item col-6 col-lg-auto">
-            <a class="navbar-brand nav-link py-2 px-0 px-lg-2" href="https://github.com/markrissinger?tab=repositories">
+            <a class="navbar-brand nav-link py-2 px-0 px-lg-2" target="_blank" href="https://github.com/markrissinger?tab=repositories">
               <i class="bi bi-github fa-4x"></i>
             </a>
           </li>

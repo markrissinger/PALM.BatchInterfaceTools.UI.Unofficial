@@ -1,13 +1,9 @@
 <template>
-  Welcome to the Batch Interface Converter vue!
-  <br/>
-  <span>
-    Looking for interface: {{ $route.params.interfacename }}
-  </span>
+  Welcome to the Inbound Inter Intra Interface (IUI002)!
 </template>
 
 <script lang="ts">
-    import { defineComponent } from 'vue';
+  import { defineComponent } from 'vue'
 
     export default defineComponent({
         components: {

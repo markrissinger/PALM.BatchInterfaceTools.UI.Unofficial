@@ -1,9 +1,9 @@
 <template>
-  Welcome to the Contact vue!
+  Welcome to the Inbound Voucher Load (API002)!
 </template>
 
 <script lang="ts">
-    import { defineComponent } from 'vue';
+  import { defineComponent } from 'vue'
 
     export default defineComponent({
         components: {

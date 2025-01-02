@@ -12,6 +12,8 @@
       <router-view />
     </main>
 
+    <br/>
+
     <Footer />
   </div>
 </template>
