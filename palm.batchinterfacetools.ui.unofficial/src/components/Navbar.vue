@@ -20,7 +20,7 @@
     <div class="container-fluid">
       <!--Brand-->
       <a class="navbar-brand" href="/">
-        <img src="../../public/pbit.icon.ico" alt="PBIT Icon" width="30" height="30" /> PBIT (Unofficial)
+        <img src="../../public/pbit.icon.ico" alt="PBIT Icon" width="30" height="30" /> PBIT
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>

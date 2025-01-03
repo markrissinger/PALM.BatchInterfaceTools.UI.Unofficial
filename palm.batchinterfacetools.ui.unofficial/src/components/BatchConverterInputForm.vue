@@ -66,9 +66,16 @@
 <script setup lang="ts">
   // script setup using Composition API
   // imports
-  import { watch, ref } from 'vue'
+  import { watch, ref, inject } from 'vue'
   import axios from 'axios';
-  import * as bootstrap from 'bootstrap';
+  import {Modal} from 'bootstrap';
+
+
+// Inject Bootstrap with the same key as defined in main.js
+const bootstrap = inject('bootstrap');
+
+
+  //import * as bootstrap from 'bootstrap';
 
   // model variables
   const outputFormat = ref('1')
@@ -145,7 +152,8 @@
           link.click();
 
           // download complete; notify user
-          const myModal = new bootstrap.Modal((document.getElementById('modalFileDownload') as HTMLFormElement))
+          const myModal = new Modal((document.getElementById('modalFileDownload') as HTMLFormElement))
+          //const myModal = (document.getElementById('modalFileDownload') as HTMLFormElement)
           myModal.show()
         }
         else {

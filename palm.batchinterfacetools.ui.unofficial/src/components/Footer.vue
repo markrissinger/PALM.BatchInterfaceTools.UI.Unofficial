@@ -5,10 +5,9 @@
         <div class="col-md-5 offset-md-1">
           <a class="d-inline-flex align-items-center mb-2 text-body-emphasis text-decoration-none" href="/" aria-label="PALM Batch Interface Tools (Unofficial)">
             <img src="../../public/pbit.icon.ico" alt="PBIT Icon" width="30" height="30" />
-            <span class="fs-5 px-2">PALM Batch Interface Tools (Unofficial)</span>
+            <span class="fs-5 px-2">PALM Batch Interface Tools (PBIT)</span>
           </a>
           <ul class="list-unstyled small">
-            <li class="mb-2">Designed and built out of pure frustration.</li>
             <li class="mb-2">Code and site tools are licensed <a href="https://github.com/markrissinger/PALM.BatchInterfaceTools.UI.Unofficial/blob/master/LICENSE.txt" target="_blank" rel="license noopener">MIT.</a></li>
             <li class="mb-2">Currently in development.</li>
           </ul>
@@ -74,6 +73,6 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 2.5rem; /* Footer height */
+    height: 2.0rem; /* Footer height */
   }
 </style>
