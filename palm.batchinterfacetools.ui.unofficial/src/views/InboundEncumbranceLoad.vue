@@ -14,8 +14,8 @@
     <!--Interface Templates-->
     <p>
       <span class="h6">Interface Templates</span>
-      <br /><i class="h6 bi bi-file-spreadsheet"></i> <a href="../../exceltemplates/purchaseorders/InboundEncumbranceLoadTemplate.xlsx">Blank Template</a>
-      <br /><i class="h6 bi bi-file-spreadsheet"></i> <a href="../../exceltemplates/purchaseorders/InboundEncumbranceLoadSample.xlsx">Sample Data Template</a>
+      <br /><i class="h6 bi bi-file-spreadsheet"></i> <a href="https://1drv.ms/x/s!Aqj3-TMk1RMsjz5j3F2e0lkZDG32?download=1" download target="_blank">Blank Template</a>
+      <br /><i class="h6 bi bi-file-spreadsheet"></i> <a href="https://1drv.ms/x/s!Aqj3-TMk1RMsjz1wp_lfCuiPdXf3?download=1" download target="_blank">Sample Data Template</a>
     </p>
 
     <hr class="my-4" />
