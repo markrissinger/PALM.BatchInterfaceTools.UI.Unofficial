@@ -72,7 +72,7 @@
 
 
 // Inject Bootstrap with the same key as defined in main.js
-const bootstrap = inject('bootstrap');
+//const bootstrap = inject('bootstrap');
 
 
   //import * as bootstrap from 'bootstrap';

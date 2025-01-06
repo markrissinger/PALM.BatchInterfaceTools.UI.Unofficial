@@ -42,7 +42,7 @@
               <li><router-link to="/inboundvoucherload" class="nav-link" aria-current="page">Inbound Voucher Load (API002)</router-link></li>
               <li><router-link to="/inboundjournalentry" class="nav-link disabled" aria-current="page">Inbound Journal Entry (GLI006)</router-link></li>
               <li><router-link to="/inboundinterintraunit" class="nav-link disabled" aria-current="page">Inbound Inter/Intra Unit (IUI002)</router-link></li>
-              <li><router-link to="/inboundbudgetjournal" class="nav-link disabled" aria-current="page">Inbound Budget Journal (KKI001)</router-link></li>
+              <li><router-link to="/inboundbudgetjournal" class="nav-link" aria-current="page">Inbound Budget Journal (KKI001)</router-link></li>
               <li><router-link to="/inboundencumbranceload" class="nav-link" aria-current="page">Inbound Encumbrance Load (POI002)</router-link></li>
             </ul>
           </li>
