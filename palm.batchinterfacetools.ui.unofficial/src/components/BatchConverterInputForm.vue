@@ -34,7 +34,10 @@
     <br />
 
     <!--Submit-->
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary" id="submitButton">
+      <span v-show="showSpinner" class="spinner-border spinner-border-sm" role="status" aria-hidden="true" id="submitButtonSpinner"></span>
+      Submit
+    </button>
   </form>
 
   <br />
@@ -60,6 +63,21 @@
     </div>
   </div>
 
+  <!--Modal Popup (Exception)-->
+  <div class="modal fade" id="modalException" tabindex="-1" aria-labelledby="modalExceptionLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="modalExceptionLabel">Error processing the file</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          {{ exceptionMessage }}
+        </div>
+      </div>
+    </div>
+  </div>
+
   <br />
 </template>
 
@@ -70,13 +88,6 @@
   import axios from 'axios';
   import {Modal} from 'bootstrap';
 
-
-// Inject Bootstrap with the same key as defined in main.js
-//const bootstrap = inject('bootstrap');
-
-
-  //import * as bootstrap from 'bootstrap';
-
   // model variables
   const outputFormat = ref('1')
   const agencyBusinessSystemInput = ref('')
@@ -85,6 +96,8 @@
   const showTextContents = ref(false)
   const fileInput = ref<HTMLInputElement | null>(null)
   const files = ref()
+  const showSpinner = ref(false)
+  const exceptionMessage = ref('')
 
   // incoming properties from parent
   const props = defineProps({
@@ -104,7 +117,8 @@
     showTextContents.value = false;
 
     // spin the button kronk
-
+    (document.getElementById('submitButton') as HTMLButtonElement).classList.add("disabled");
+    showSpinner.value = true;
 
     // determine which controller to hit
     const controller = props.controllerName
@@ -139,8 +153,6 @@
       }
     )
       .then(function (response) {
-        // stop the button kronk
-
         if (outputFile) {
           // download the file from the returned blob
           const blob = response.data
@@ -152,9 +164,8 @@
           link.click();
 
           // download complete; notify user
-          const myModal = new Modal((document.getElementById('modalFileDownload') as HTMLFormElement))
-          //const myModal = (document.getElementById('modalFileDownload') as HTMLFormElement)
-          myModal.show()
+          const modal = new Modal((document.getElementById('modalFileDownload') as HTMLElement))
+          modal.show()
         }
         else {
           // load the contents to the text area
@@ -164,11 +175,28 @@
           showTextContents.value = true;
         }
       })
-      .catch(() => {
+      .catch((error) => {
+        // Handle error
+        if (error.response) {
+          // The request was made and the server responded with a status code
+          // that falls out of the range of 2xx
+          // alert the user something brokeded
+          exceptionMessage.value = error.response.data;
+        } else if (error.request) {
+          // The request was made but no response was received
+          exceptionMessage.value = "Gremlins appear to have taken the API offline...";
+        } else {
+          // Something happened in setting up the request that triggered an Error
+          exceptionMessage.value = "Double check the input file to make sure a valid file was selected.";
+        }
+
+        const modal = new Modal((document.getElementById('modalException') as HTMLElement))
+        modal.show()
+      })
+      .finally(() => {
         // stop the button kronk
-
-        // aler the user something brokeded
-
+        (document.getElementById('submitButton') as HTMLButtonElement).classList.remove("disabled");
+        showSpinner.value = false;
       })
   }
 
