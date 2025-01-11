@@ -181,7 +181,15 @@
           // The request was made and the server responded with a status code
           // that falls out of the range of 2xx
           // alert the user something brokeded
-          exceptionMessage.value = error.response.data;
+          if (outputFile) {
+            error.response.data.text().then((res : any) => {
+              const blobError = JSON.parse(res);
+              exceptionMessage.value = blobError.message;
+            });
+          }
+          else {
+            exceptionMessage.value = error.response.data.message;
+          }
         } else if (error.request) {
           // The request was made but no response was received
           exceptionMessage.value = "Gremlins appear to have taken the API offline...";
