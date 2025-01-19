@@ -47,6 +47,11 @@
             </ul>
           </li>
 
+          <!--Telemetry-->
+          <li class="nav-item">
+            <router-link to="/Telemetry" class="nav-link disabled">Telemetry</router-link>
+          </li>
+
           <!--About-->
           <li class="nav-item">
             <router-link to="/About" class="nav-link">About</router-link>

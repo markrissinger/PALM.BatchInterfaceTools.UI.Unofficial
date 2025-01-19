@@ -2,7 +2,7 @@
   <form @submit="submitForm">
     <!--Input File-->
     <div class="mb-3">
-      <label for="inputFile" class="form-label">Input File*</label>
+      <label for="inputFile" class="form-label">Input File<sup>*</sup></label>
       <input class="form-control" type="file" id="inputFile" ref="fileInput" @change="onFileChanged" required>
     </div>
 
