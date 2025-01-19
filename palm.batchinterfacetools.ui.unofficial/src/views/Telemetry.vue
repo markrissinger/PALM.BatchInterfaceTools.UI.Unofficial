@@ -1,11 +1,10 @@
 <template>
   <div class="col-md-8 offset-md-2">
-    <p class="h0 text-center"><strong>Telemetry / Usage Statistics</strong></p>
+    <p class="h0 text-center"><strong>Telemetry</strong></p>
 
     <hr class="my-4" />
 
     <form @submit="submitForm">
-
       <!--Agency-->
       <div class="row g-2">
         <div class="mb-3 col-md-4">
@@ -43,7 +42,8 @@
         <div class="mb-3 col-md-4">
           <label for="interfaceSelector" class="form-label">Interface</label>
           <select v-model="interfaceId" class="form-select" id="interfaceSelector" aria-label="Select output format">
-            <option disabled value="">All</option>
+            <option disabled value="">Select an interace</option>
+            <option value="">All</option>
           </select>
         </div>
       </div>
@@ -55,16 +55,6 @@
         Submit
       </button>
     </form>
-
-
-    <hr class="my-4" />
-
-    <a href="https://myfloridacfo.com/floridapalm" class="link-secondary link-primary:hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">
-      <p class="h4"><strong>Florida PALM Project</strong></p>
-      <p class="lead">
-        Learn more about the Florida PALM Project. Updates on how the project is going, what's new, and more!
-      </p>
-    </a>
   </div>
 </template>
 
